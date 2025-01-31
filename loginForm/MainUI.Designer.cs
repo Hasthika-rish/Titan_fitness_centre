@@ -77,6 +77,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Category Class";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -121,6 +122,7 @@
             this.button5.TabIndex = 6;
             this.button5.Text = "Personal Trainer";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button10
             // 
@@ -134,6 +136,7 @@
             this.button10.TabIndex = 11;
             this.button10.Text = "Log Out";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button8
             // 
@@ -144,6 +147,7 @@
             this.button8.TabIndex = 12;
             this.button8.Text = "Upgrade Membership";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // label1
             // 

@@ -24,18 +24,43 @@ namespace loginForm
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            EquipmentManger equipmentManger = new EquipmentManger();//opens equipment manager form
+            equipmentManger.Show();//shows the form
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            UserManager userManager = new UserManager();//opens user manager form
+            userManager.Show();//shows the form
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Form2 viewacccount = new Form2();//opens view account form
             viewacccount.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();//opens login form
+            form1.Show();//shows the form
+            this.Hide();//close the main UI after open login UI
+        }
+
+        private void button2_Click(object sender, EventArgs e)  
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e) //opens upgrade membership form
+        {
+            UpgradeMem upgradeMem = new UpgradeMem();//opens upgrade membership form
+            upgradeMem.Show(); //shows the form 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
