@@ -1,0 +1,24 @@
+C:\Users\hasth\source\repos\loginForm\loginForm\bin\Debug\loginForm.exe.config
+C:\Users\hasth\source\repos\loginForm\loginForm\bin\Debug\loginForm.exe
+C:\Users\hasth\source\repos\loginForm\loginForm\bin\Debug\loginForm.pdb
+C:\Users\hasth\source\repos\loginForm\loginForm\obj\Debug\loginForm.csproj.AssemblyReference.cache
+C:\Users\hasth\source\repos\loginForm\loginForm\obj\Debug\loginForm.Form1.resources
+C:\Users\hasth\source\repos\loginForm\loginForm\obj\Debug\loginForm.Properties.Resources.resources
+C:\Users\hasth\source\repos\loginForm\loginForm\obj\Debug\loginForm.csproj.GenerateResource.cache
+C:\Users\hasth\source\repos\loginForm\loginForm\obj\Debug\loginForm.csproj.CoreCompileInputs.cache
+C:\Users\hasth\source\repos\loginForm\loginForm\obj\Debug\loginForm.exe
+C:\Users\hasth\source\repos\loginForm\loginForm\obj\Debug\loginForm.pdb
+C:\Users\hasth\source\repos\loginForm\loginForm\obj\Debug\loginForm.MainUI.resources
+C:\Users\hasth\source\repos\loginForm\loginForm\obj\Debug\loginForm.Form2.resources
+E:\project final\loginForm\bin\Debug\loginForm.exe.config
+E:\project final\loginForm\bin\Debug\loginForm.exe
+E:\project final\loginForm\bin\Debug\loginForm.pdb
+E:\project final\loginForm\obj\Debug\loginForm.csproj.AssemblyReference.cache
+E:\project final\loginForm\obj\Debug\loginForm.Form1.resources
+E:\project final\loginForm\obj\Debug\loginForm.MainUI.resources
+E:\project final\loginForm\obj\Debug\loginForm.Properties.Resources.resources
+E:\project final\loginForm\obj\Debug\loginForm.Form2.resources
+E:\project final\loginForm\obj\Debug\loginForm.csproj.GenerateResource.cache
+E:\project final\loginForm\obj\Debug\loginForm.csproj.CoreCompileInputs.cache
+E:\project final\loginForm\obj\Debug\loginForm.exe
+E:\project final\loginForm\obj\Debug\loginForm.pdb
