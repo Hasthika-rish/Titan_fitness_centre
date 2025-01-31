@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EquipmentManger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EquipmentManger.Designer.cs">
+      <DependentUpon>EquipmentManger.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpgradeMem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpgradeMem.Designer.cs">
+      <DependentUpon>UpgradeMem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManager.Designer.cs">
+      <DependentUpon>UserManager.cs</DependentUpon>
     </Compile>
     <Compile Include="view.cs">
       <SubType>Form</SubType>
@@ -67,6 +85,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EquipmentManger.resx">
+      <DependentUpon>EquipmentManger.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -82,6 +103,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UpgradeMem.resx">
+      <DependentUpon>UpgradeMem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManager.resx">
+      <DependentUpon>UserManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view.resx">
       <DependentUpon>view.cs</DependentUpon>
     </EmbeddedResource>

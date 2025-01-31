@@ -22,3 +22,18 @@ E:\project final\loginForm\obj\Debug\loginForm.csproj.GenerateResource.cache
 E:\project final\loginForm\obj\Debug\loginForm.csproj.CoreCompileInputs.cache
 E:\project final\loginForm\obj\Debug\loginForm.exe
 E:\project final\loginForm\obj\Debug\loginForm.pdb
+G:\Titan_fitness_centre\loginForm\bin\Debug\loginForm.exe.config
+G:\Titan_fitness_centre\loginForm\bin\Debug\loginForm.exe
+G:\Titan_fitness_centre\loginForm\bin\Debug\loginForm.pdb
+G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.csproj.AssemblyReference.cache
+G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.Form1.resources
+G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.MainUI.resources
+G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.Properties.Resources.resources
+G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.Form2.resources
+G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.csproj.GenerateResource.cache
+G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.csproj.CoreCompileInputs.cache
+G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.exe
+G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.pdb
+G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.EquipmentManger.resources
+G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.UpgradeMem.resources
+G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.UserManager.resources

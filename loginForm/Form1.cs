@@ -24,7 +24,22 @@ namespace loginForm
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string username = txtUsername.Text;  // Assuming your textbox name is txtUsername
+            string password = txtPassword.Text;  // Assuming your textbox name is txtPassword
 
+            if (username == "admin" && password == "password")
+            {
+                // Open Main UI
+                MainUI mainForm = new MainUI();
+                mainForm.Show();
+
+                // Hide Login Form (or use this.Close() to close it completely)
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Username or Password!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)

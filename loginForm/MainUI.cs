@@ -31,5 +31,11 @@ namespace loginForm
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form2 viewacccount = new Form2();//opens view account form
+            viewacccount.Show();
+        }
     }
 }
