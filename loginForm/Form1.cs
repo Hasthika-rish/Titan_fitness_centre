@@ -31,7 +31,7 @@ namespace loginForm
             {
                 // Open Main UI
                 MainUI mainForm = new MainUI(); // Assuming your main form name is MainUI
-                mainForm.Show();
+                mainForm.Show(); // Show the main form
 
                 // Hide Login Form (or use this.Close() to close it completely)
                 this.Hide();

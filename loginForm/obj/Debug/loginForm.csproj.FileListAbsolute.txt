@@ -38,3 +38,13 @@ G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.EquipmentManger.resources
 G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.UpgradeMem.resources
 G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.UserManager.resources
 G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.category.resources
+G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.Attendance.resources
+G:\Titan_fitness_centre\loginForm\bin\Debug\EntityFramework.dll
+G:\Titan_fitness_centre\loginForm\bin\Debug\EntityFramework.SqlServer.dll
+G:\Titan_fitness_centre\loginForm\bin\Debug\System.Data.SQLite.dll
+G:\Titan_fitness_centre\loginForm\bin\Debug\System.Data.SQLite.EF6.dll
+G:\Titan_fitness_centre\loginForm\bin\Debug\System.Data.SQLite.Linq.dll
+G:\Titan_fitness_centre\loginForm\bin\Debug\EntityFramework.xml
+G:\Titan_fitness_centre\loginForm\bin\Debug\EntityFramework.SqlServer.xml
+G:\Titan_fitness_centre\loginForm\bin\Debug\System.Data.SQLite.xml
+G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.csproj.Up2Date
