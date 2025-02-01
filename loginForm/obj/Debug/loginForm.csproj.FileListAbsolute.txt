@@ -37,3 +37,4 @@ G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.pdb
 G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.EquipmentManger.resources
 G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.UpgradeMem.resources
 G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.UserManager.resources
+G:\Titan_fitness_centre\loginForm\obj\Debug\loginForm.category.resources

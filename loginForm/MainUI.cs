@@ -49,7 +49,8 @@ namespace loginForm
 
         private void button2_Click(object sender, EventArgs e)  
         {
-
+            category category = new category();//opens category form
+            category.Show();//shows the form
         }
 
         private void button8_Click(object sender, EventArgs e) //opens upgrade membership form
@@ -61,6 +62,12 @@ namespace loginForm
         private void button5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Attendance attendance = new Attendance();//opens attendance form
+            attendance.Show();//shows the form
         }
     }
 }
