@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Windows.Forms; // For Windows Forms compatibility
+//using System.Windows.Forms; // For Windows Forms compatibility
 
-namespace TitanFitnessCenter
+namespace Titan_fitness_center
 {
     /// <summary>
     /// Represents a gym member with attributes and functionalities.

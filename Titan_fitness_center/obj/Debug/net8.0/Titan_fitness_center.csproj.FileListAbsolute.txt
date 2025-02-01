@@ -12,3 +12,11 @@ C:\Users\hasth\source\repos\Titan_fitness_center\Titan_fitness_center\obj\Debug\
 C:\Users\hasth\source\repos\Titan_fitness_center\Titan_fitness_center\obj\Debug\net8.0\Titan_fitness_center.pdb
 C:\Users\hasth\source\repos\Titan_fitness_center\Titan_fitness_center\obj\Debug\net8.0\Titan_fitness_center.genruntimeconfig.cache
 C:\Users\hasth\source\repos\Titan_fitness_center\Titan_fitness_center\obj\Debug\net8.0\ref\Titan_fitness_center.dll
+G:\Titan_fitness_centre\Titan_fitness_center\obj\Debug\net8.0\Titan_fitness_center.GeneratedMSBuildEditorConfig.editorconfig
+G:\Titan_fitness_centre\Titan_fitness_center\obj\Debug\net8.0\Titan_fitness_center.AssemblyInfoInputs.cache
+G:\Titan_fitness_centre\Titan_fitness_center\obj\Debug\net8.0\Titan_fitness_center.AssemblyInfo.cs
+G:\Titan_fitness_centre\Titan_fitness_center\obj\Debug\net8.0\Titan_fitness_center.csproj.CoreCompileInputs.cache
+G:\Titan_fitness_centre\Titan_fitness_center\obj\Debug\net8.0\Titan_fitness_center.sourcelink.json
+G:\Titan_fitness_centre\Titan_fitness_center\obj\Debug\net8.0\Titan_fitness_center.dll
+G:\Titan_fitness_centre\Titan_fitness_center\obj\Debug\net8.0\refint\Titan_fitness_center.dll
+G:\Titan_fitness_centre\Titan_fitness_center\obj\Debug\net8.0\Titan_fitness_center.pdb
