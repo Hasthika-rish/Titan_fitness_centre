@@ -24,7 +24,7 @@ namespace loginForm
 
         private void label4_Click(object sender, EventArgs e)
         {
-
+            Console.WriteLine("test2");
         }
 
         private void EquipmentManger_Load(object sender, EventArgs e)
