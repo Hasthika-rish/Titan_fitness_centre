@@ -14,7 +14,7 @@ namespace loginForm
     {
         public category()
         {
-            InitializeComponent();
+            InitializeComponent();//initializes the component
         }
 
         private void label1_Click(object sender, EventArgs e)
