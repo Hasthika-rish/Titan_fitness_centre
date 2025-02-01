@@ -19,10 +19,15 @@ namespace loginForm
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            Console.WriteLine("test1");
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EquipmentManger_Load(object sender, EventArgs e)
         {
 
         }
