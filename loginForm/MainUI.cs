@@ -32,6 +32,7 @@ namespace loginForm
         {
             UserManager userManager = new UserManager();//opens user manager form
             userManager.Show();//shows the form
+
         }
 
         private void button4_Click(object sender, EventArgs e)

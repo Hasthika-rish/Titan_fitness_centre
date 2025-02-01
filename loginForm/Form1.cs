@@ -14,7 +14,7 @@ namespace loginForm
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent(); // Initialize the form
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace loginForm
             if (username == "admin" && password == "password")
             {
                 // Open Main UI
-                MainUI mainForm = new MainUI();
+                MainUI mainForm = new MainUI(); // Assuming your main form name is MainUI
                 mainForm.Show();
 
                 // Hide Login Form (or use this.Close() to close it completely)
@@ -48,6 +48,11 @@ namespace loginForm
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsername_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
         }
