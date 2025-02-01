@@ -19,7 +19,7 @@ namespace loginForm
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            Console.WriteLine("test1..."); // change the code 
         }
 
         private void label4_Click(object sender, EventArgs e)
