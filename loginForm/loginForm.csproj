@@ -80,7 +80,6 @@
     <Compile Include="category.Designer.cs">
       <DependentUpon>category.cs</DependentUpon>
     </Compile>
-    <Compile Include="databaseConnect.cs" />
     <Compile Include="EquiCont.cs" />
     <Compile Include="EquipmentManger.cs">
       <SubType>Form</SubType>
