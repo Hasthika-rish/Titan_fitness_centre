@@ -74,7 +74,6 @@
     <Compile Include="Attendance.Designer.cs">
       <DependentUpon>Attendance.cs</DependentUpon>
     </Compile>
-    <Compile Include="AttendanceContol.cs" />
     <Compile Include="category.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,9 +94,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberCont.cs" />
-    <Compile Include="paymentCont.cs" />
-    <Compile Include="trainerCont.cs" />
     <Compile Include="UpgradeMem.cs">
       <SubType>Form</SubType>
     </Compile>

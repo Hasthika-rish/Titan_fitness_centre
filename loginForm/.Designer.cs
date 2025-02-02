@@ -78,7 +78,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView2.Size = new System.Drawing.Size(767, 145);
+            this.dataGridView2.Size = new System.Drawing.Size(767, 216);
             this.dataGridView2.TabIndex = 16;
             // 
             // Form2
