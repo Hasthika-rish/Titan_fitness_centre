@@ -1,74 +1,53 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace loginForm
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data.SQLite;
-
     public class AttendanceController
     {
-        private static string connectionString = "Data Source=database/gms.db;Version=3;";
-
-        public static void MarkAttendance(string memberID, string date, string time, string status)
+        public static bool MarkAttendance(string memberID, string date, string time, string status)
         {
-            using (var conn = new SQLiteConnection(connectionString))
+            string query = "INSERT INTO Attendance (MemberID, Date, Time, Status) VALUES (@id, @date, @time, @status)";
+            MySqlParameter[] parameters =
             {
-                conn.Open();
-                string query = "INSERT INTO Attendance (MemberID, Date, Time, Status) VALUES (@id, @date, @time, @status)";
-                using (var cmd = new SQLiteCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@id", memberID);
-                    cmd.Parameters.AddWithValue("@date", date);
-                    cmd.Parameters.AddWithValue("@time", time);
-                    cmd.Parameters.AddWithValue("@status", status);
-                    cmd.ExecuteNonQuery();
-                }
-            }
+                new MySqlParameter("@id", memberID),
+                new MySqlParameter("@date", date),
+                new MySqlParameter("@time", time),
+                new MySqlParameter("@status", status)
+            };
+
+            return databaseConnection.GetInstance().ExecuteNonQuery(query, parameters);
         }
 
-        public static void CancelAttendance(string memberID, string date)
+        public static bool CancelAttendance(string memberID, string date)
         {
-            using (var conn = new SQLiteConnection(connectionString))
+            string query = "DELETE FROM Attendance WHERE MemberID = @id AND Date = @date";
+            MySqlParameter[] parameters =
             {
-                conn.Open();
-                string query = "DELETE FROM Attendance WHERE MemberID = @id AND Date = @date";
-                using (var cmd = new SQLiteCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@id", memberID);
-                    cmd.Parameters.AddWithValue("@date", date);
-                    cmd.ExecuteNonQuery();
-                }
-            }
+                new MySqlParameter("@id", memberID),
+                new MySqlParameter("@date", date)
+            };
+
+            return databaseConnection.GetInstance().ExecuteNonQuery(query, parameters);
         }
 
         public static List<string> ViewAttendance(string memberID)
         {
             List<string> attendanceRecords = new List<string>();
+            string query = "SELECT Date, Time, Status FROM Attendance WHERE MemberID = @id";
+            MySqlParameter[] parameters = { new MySqlParameter("@id", memberID) };
 
-            using (var conn = new SQLiteConnection(connectionString))
+            DataTable result = databaseConnection.GetInstance().ExecuteQuery(query, parameters);
+
+            foreach (DataRow row in result.Rows)
             {
-                conn.Open();
-                string query = "SELECT Date, Time, Status FROM Attendance WHERE MemberID = @id";
-                using (var cmd = new SQLiteCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@id", memberID);
-                    using (var reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            string record = $"Date: {reader["Date"]}, Time: {reader["Time"]}, Status: {reader["Status"]}";
-                            attendanceRecords.Add(record);
-                        }
-                    }
-                }
+                string record = $"Date: {row["Date"]}, Time: {row["Time"]}, Status: {row["Status"]}";
+                attendanceRecords.Add(record);
             }
+
             return attendanceRecords;
         }
     }
-
 }
