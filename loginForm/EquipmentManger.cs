@@ -39,20 +39,34 @@ namespace loginForm
         }
 
         // Save Equipment (Insert/Update)
-        private void btnSaveChanges_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             string equipmentID = textBox1.Text;
-            string quantity = textBox2.Text;
-            string status = textBox3.Text;
-           
+            string name = textBox2.Text;
+            string type = textBox3.Text;
 
-            if (string.IsNullOrWhiteSpace(equipmentID) ||
-               
-                string.IsNullOrWhiteSpace(type) ||
-                (textBox2.Text, out quantity) ||
-                
+            if (string.IsNullOrWhiteSpace(equipmentID) || string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(type))
             {
                 MessageBox.Show("Please enter valid data in all fields.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string quantityText = textBox2.Text;
+            string statusText = textBox3.Text;
+
+            // Parse the fields to ensure they are valid numbers
+            int quantity;
+            if (!int.TryParse(quantityText, out quantity))
+            {
+                MessageBox.Show("Please enter a valid quantity.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Parse the statusText as a double (for cost)
+            double cost;
+            if (!double.TryParse(statusText, out cost))
+            {
+                MessageBox.Show("Please enter a valid cost.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -71,7 +85,7 @@ namespace loginForm
         }
 
         // Remove Equipment
-        private void btnRemove_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             string equipmentID = textBox1.Text;
 
@@ -101,19 +115,17 @@ namespace loginForm
         }
 
         // Reset Fields when clicking "Reset to Default"
-        //private void btnResetToDefault_Click(object sender, EventArgs e)
-        //{
-        //    ResetFields();
-        //}
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ResetFields();
+        }
 
-       // Helper function to clear input fields
+        // Helper function to clear input fields
         private void ResetFields()
         {
-           textBox1.Text = "";
+            textBox1.Text = "";
             textBox2.Text = "";
-        
-           textBox3.Text = "";
-            
+            textBox3.Text = "";
         }
     }
 }
