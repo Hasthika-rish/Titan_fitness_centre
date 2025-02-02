@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Titan_fitness_center")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19dd27e7d9f8ff863775b2ed28b33586dbbd2a7b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e691c4555e370dd5f07fdf2f842f42d17b127ad")]
 [assembly: System.Reflection.AssemblyProductAttribute("Titan_fitness_center")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Titan_fitness_center")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

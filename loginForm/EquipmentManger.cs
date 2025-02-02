@@ -1,71 +1,119 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SQLite;
 
 namespace loginForm
 {
-    public partial class EquipmentManger : Form
+    public partial class ManageEquipments : Form
     {
-        private List<Equipment> equipmentList = new List<Equipment>();
+        private static string connectionString = "Data Source=database/gms.db;Version=3;";
 
-        public EquipmentManger()
+        public ManageEquipments()
         {
             InitializeComponent();
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            LoadEquipmentData(); // Load data when form opens
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        // Load data into DataGridView
+        private void LoadEquipmentData()
         {
-            string equipmentID = textBox1.Text.Trim();
-            string quantity = textBox2.Text.Trim();
-            string status = textBox3.Text.Trim();
-
-            if (string.IsNullOrEmpty(equipmentID) || string.IsNullOrEmpty(quantity) || string.IsNullOrEmpty(status))
+            try
             {
-                MessageBox.Show("Please fill all fields.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                using (var conn = new SQLiteConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "SELECT EquipmentID, Name, Type, Quantity, Cost FROM Equipment";
+                    using (var adapter = new SQLiteDataAdapter(query, conn))
+                    {
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        dataGridView1.DataSource = dt; // Bind to DataGridView
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Save Equipment (Insert/Update)
+        private void btnSaveChanges_Click(object sender, EventArgs e)
+        {
+            string equipmentID = textBox1.Text;
+            string quantity = textBox2.Text;
+            string status = textBox3.Text;
+           
+
+            if (string.IsNullOrWhiteSpace(equipmentID) ||
+               
+                string.IsNullOrWhiteSpace(type) ||
+                (textBox2.Text, out quantity) ||
+                
+            {
+                MessageBox.Show("Please enter valid data in all fields.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            Equipment newEquipment = new Equipment
+            bool success = EquipmentController.SaveEquipment(equipmentID, name, type, quantity, cost);
+
+            if (success)
             {
-                EquipmentID = equipmentID,
-                Quantity = int.Parse(quantity),
-                Status = status
-            };
-            equipmentList.Add(newEquipment);
-
-            MessageBox.Show("Equipment added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            LoadEquipmentData();
+                MessageBox.Show("Equipment saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadEquipmentData(); // Refresh DataGridView
+                ResetFields();
+            }
+            else
+            {
+                MessageBox.Show("Failed to save equipment.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void LoadEquipmentData()
+        // Remove Equipment
+        private void btnRemove_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = equipmentList;
+            string equipmentID = textBox1.Text;
+
+            if (string.IsNullOrWhiteSpace(equipmentID))
+            {
+                MessageBox.Show("Enter an Equipment ID to remove.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DialogResult confirm = MessageBox.Show("Are you sure you want to remove this equipment?",
+                                                   "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirm == DialogResult.Yes)
+            {
+                bool success = EquipmentController.RemoveEquipment(equipmentID);
+                if (success)
+                {
+                    MessageBox.Show("Equipment removed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadEquipmentData(); // Refresh DataGridView
+                    ResetFields();
+                }
+                else
+                {
+                    MessageBox.Show("Equipment not found or failed to remove.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
-        private void EquipmentManger_Load(object sender, EventArgs e)
+        // Reset Fields when clicking "Reset to Default"
+        //private void btnResetToDefault_Click(object sender, EventArgs e)
+        //{
+        //    ResetFields();
+        //}
+
+       // Helper function to clear input fields
+        private void ResetFields()
         {
-            LoadEquipmentData();
+           textBox1.Text = "";
+            textBox2.Text = "";
+        
+           textBox3.Text = "";
+            
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Handle cell content click event
-        }
-    }
-
-    public class Equipment
-    {
-        public string EquipmentID { get; set; }
-        public int Quantity { get; set; }
-        public string Status { get; set; }
     }
 }
